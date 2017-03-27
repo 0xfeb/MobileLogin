@@ -30,6 +30,12 @@ public class CLMobileLogin {
 	public var onSmsAction:(_ mobile:String, _ resp:(Bool)->())->() = { _ in }
 	public var onLoginAction:(_ mobile:String, _ code:String, _ resp:(Bool)->())->() = { _ in }
 	public var didLogin:()->() = { _ in }
+	
+	public init(smsAction:@escaping (String, (Bool)->())->(), loginAction:@escaping (String, String, (Bool)->())->(), afterLogin:@escaping ()->()) {
+		onSmsAction = smsAction
+		onLoginAction = loginAction
+		didLogin = afterLogin
+	}
 }
 
 public extension UIViewController {
