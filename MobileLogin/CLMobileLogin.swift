@@ -40,7 +40,7 @@ public class CLMobileLogin {
 
 public extension UIViewController {
 	public func doLogin(login:CLMobileLogin) -> UIViewController {
-		let bundle = Bundle(identifier: "com.mixbus.MobileLogin")
+		let bundle = Bundle(identifier: "org.cocoapods.MobileLogin")
 		let vc = CLMobileLoginVC(nibName: "CLMobileLoginVC", bundle: bundle)
 		vc.loginValue = login
 		self.present(vc, animated: false, completion: nil)
