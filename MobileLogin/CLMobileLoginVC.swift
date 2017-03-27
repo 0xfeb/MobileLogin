@@ -57,6 +57,7 @@ class CLMobileLoginVC: UIViewController {
 	func setup() {
 		guard let lv = loginValue else { return }
 		mobileText.placeholder = lv.mobilePlaceholder
+		mobileText.text = lv.mobileText
 		codeText.placeholder = lv.codePlaceholder
 		mobileText.rightView = sendSmsButton
 		sendSmsButton.setTitle(lv.sendSmsText, for: .normal)

@@ -15,21 +15,21 @@ import UIKit
 
 public class CLMobileLogin {
 	//MARK: env
-	var coverImage: UIImage?
-	var mobilePlaceholder: String = "手机号"
-	var tintColor: UIColor = UIColor.darkGray
-	var codePlaceholder: String = "验证码"
-	var sendSmsText: String = "发送验证码"
-	var remainSmsText: String = "剩余"
-	var loginText: String = "登录/注册"
+	public var coverImage: UIImage?
+	public var mobilePlaceholder: String = "手机号"
+	public var tintColor: UIColor = UIColor.darkGray
+	public var codePlaceholder: String = "验证码"
+	public var sendSmsText: String = "发送验证码"
+	public var remainSmsText: String = "剩余"
+	public var loginText: String = "登录/注册"
 	
 	//MARK: param
-	var mobileText: String?
+	public var mobileText: String?
 	
 	//MARK: output
-	var onSmsAction:(_ mobile:String, _ resp:(Bool)->())->() = { _ in }
-	var onLoginAction:(_ mobile:String, _ code:String, _ resp:(Bool)->())->() = { _ in }
-	var didLogin:()->() = { _ in }
+	public var onSmsAction:(_ mobile:String, _ resp:(Bool)->())->() = { _ in }
+	public var onLoginAction:(_ mobile:String, _ code:String, _ resp:(Bool)->())->() = { _ in }
+	public var didLogin:()->() = { _ in }
 }
 
 public extension UIViewController {
