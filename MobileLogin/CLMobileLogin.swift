@@ -40,7 +40,9 @@ public class CLMobileLogin {
 
 public extension UIViewController {
 	public func doLogin(login:CLMobileLogin) -> UIViewController {
-		let bundle = Bundle(identifier: "org.cocoapods.MobileLogin")
+		let sb = Bundle(for: CLMobileLoginVC.self)
+		let burl = sb.url(forResource: "MyFramework", withExtension: "bundle")!
+		let bundle = Bundle(url: burl)
 		let vc = CLMobileLoginVC(nibName: "CLMobileLoginVC", bundle: bundle)
 		vc.loginValue = login
 		self.present(vc, animated: false, completion: nil)
