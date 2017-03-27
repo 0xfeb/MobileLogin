@@ -11,7 +11,7 @@ import Coastline
 
 class CLMobileLoginVC: UIViewController {
 	var loginValue:CLMobileLogin?
-
+	
 	@IBOutlet weak var keyboardHeight: NSLayoutConstraint!
 	
 	@IBOutlet weak var mobileText: UITextField!
@@ -23,37 +23,28 @@ class CLMobileLoginVC: UIViewController {
 	var showHandle:NSObject?
 	var hideHandle:NSObject?
 	
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-		showHandle = NotificationCenter.default.addObserver(forName: Notification.Name.UIKeyboardDidShow, object: self, queue: OperationQueue.main) { [weak self] (noti) in
-			if let value = noti.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue {
-				let rect = value.cgRectValue
-				UIView.animate(withDuration: 0.2, animations: {
-					self?.keyboardHeight.constant =  rect.size.height
-					self?.view.setNeedsLayout()
-				})
-			}
-		} as? NSObject
+	override func viewDidLoad() {
+		super.viewDidLoad()
 		
-		hideHandle = NotificationCenter.default.addObserver(forName: Notification.Name.UIKeyboardDidShow, object: self, queue: OperationQueue.main) { [weak self] (noti) in
-			UIView.animate(withDuration: 0.2, animations: {
-				self?.keyboardHeight.constant =  0
-				self?.view.setNeedsLayout()
-			})
-		} as? NSObject
+		NotificationCenter.default.addObserver(self, selector: #selector(CLMobileLoginVC.onShowKeyboard(noti:)), name: Notification.Name.UIKeyboardDidShow, object: nil)
+		NotificationCenter.default.addObserver(self, selector: #selector(CLMobileLoginVC.onHideKeyboard(noti:)), name: NSNotification.Name.UIKeyboardDidHide, object: nil)
 		
 		setup()
-    }
+	}
+	
+	func onShowKeyboard(noti:Notification) {
+		if let value = noti.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue {
+			let rect = value.cgRectValue
+			self.keyboardHeight.constant =  rect.size.height
+		}
+	}
+	
+	func onHideKeyboard(noti:Notification) {
+		self.keyboardHeight.constant =  0
+	}
 	
 	deinit {
-		if let showHandle = showHandle {
-			NotificationCenter.default.removeObserver(showHandle)
-		}
-		
-		if let hideHandle = hideHandle {
-			NotificationCenter.default.removeObserver(hideHandle)
-		}
+		NotificationCenter.default.removeObserver(self)
 	}
 	
 	func setup() {
@@ -66,6 +57,7 @@ class CLMobileLoginVC: UIViewController {
 		loginButton.setTitle(lv.loginText, for: .normal)
 		loginButton.backgroundColor = lv.tintColor
 		signImage.image = lv.coverImage
+		sendSmsButton.setTitleColor(lv.tintColor, for: .normal)
 	}
 	
 	@IBAction func onClickSendSms(_ sender: UIButton) {
