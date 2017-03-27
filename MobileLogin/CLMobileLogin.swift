@@ -43,7 +43,6 @@ public extension UIViewController {
 		let bundle = Bundle(identifier: "com.mixbus.MobileLogin")
 		let vc = CLMobileLoginVC(nibName: "CLMobileLoginVC", bundle: bundle)
 		vc.loginValue = login
-		vc.setup()
 		self.present(vc, animated: false, completion: nil)
 		return vc
 	}

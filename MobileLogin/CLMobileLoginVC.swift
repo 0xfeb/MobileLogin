@@ -42,6 +42,8 @@ class CLMobileLoginVC: UIViewController {
 				self?.view.setNeedsLayout()
 			})
 		} as? NSObject
+		
+		setup()
     }
 	
 	deinit {
