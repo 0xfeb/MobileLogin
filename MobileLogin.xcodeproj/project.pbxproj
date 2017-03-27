@@ -7,13 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F441C49F5E6EC06354B259C /* Pods_MobileLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCADBF625AD0D5820A3C6E8E /* Pods_MobileLogin.framework */; };
 		6CED39551E87567F00015D5F /* MobileLogin.h in Headers */ = {isa = PBXBuildFile; fileRef = 6CED39531E87567F00015D5F /* MobileLogin.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6CED395F1E87699D00015D5F /* CLMobileLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CED395D1E87699D00015D5F /* CLMobileLoginVC.swift */; };
+		6CED39601E87699D00015D5F /* CLMobileLoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CED395E1E87699D00015D5F /* CLMobileLoginVC.xib */; };
+		6CED39621E87E4AC00015D5F /* CLMobileLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CED39611E87E4AC00015D5F /* CLMobileLogin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		43B2C1CBB099AEE7B361A826 /* Pods-MobileLogin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileLogin.release.xcconfig"; path = "Pods/Target Support Files/Pods-MobileLogin/Pods-MobileLogin.release.xcconfig"; sourceTree = "<group>"; };
 		6CED39501E87567F00015D5F /* MobileLogin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MobileLogin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CED39531E87567F00015D5F /* MobileLogin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MobileLogin.h; sourceTree = "<group>"; };
 		6CED39541E87567F00015D5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6CED395D1E87699D00015D5F /* CLMobileLoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLMobileLoginVC.swift; sourceTree = "<group>"; };
+		6CED395E1E87699D00015D5F /* CLMobileLoginVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CLMobileLoginVC.xib; sourceTree = "<group>"; };
+		6CED39611E87E4AC00015D5F /* CLMobileLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLMobileLogin.swift; sourceTree = "<group>"; };
+		DCADBF625AD0D5820A3C6E8E /* Pods_MobileLogin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileLogin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9A348A1B652916B51B1E211 /* Pods-MobileLogin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileLogin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MobileLogin/Pods-MobileLogin.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,17 +31,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F441C49F5E6EC06354B259C /* Pods_MobileLogin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D6FE3F1EE4CBFC8C2C62C88 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E9A348A1B652916B51B1E211 /* Pods-MobileLogin.debug.xcconfig */,
+				43B2C1CBB099AEE7B361A826 /* Pods-MobileLogin.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		6CED39461E87567F00015D5F = {
 			isa = PBXGroup;
 			children = (
 				6CED39521E87567F00015D5F /* MobileLogin */,
 				6CED39511E87567F00015D5F /* Products */,
+				3D6FE3F1EE4CBFC8C2C62C88 /* Pods */,
+				FE9B9CE7DA6332B353CFE5E2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -48,8 +70,19 @@
 			children = (
 				6CED39531E87567F00015D5F /* MobileLogin.h */,
 				6CED39541E87567F00015D5F /* Info.plist */,
+				6CED395D1E87699D00015D5F /* CLMobileLoginVC.swift */,
+				6CED39611E87E4AC00015D5F /* CLMobileLogin.swift */,
+				6CED395E1E87699D00015D5F /* CLMobileLoginVC.xib */,
 			);
 			path = MobileLogin;
+			sourceTree = "<group>";
+		};
+		FE9B9CE7DA6332B353CFE5E2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DCADBF625AD0D5820A3C6E8E /* Pods_MobileLogin.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -70,10 +103,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6CED39581E87567F00015D5F /* Build configuration list for PBXNativeTarget "MobileLogin" */;
 			buildPhases = (
+				DE13FD171F7AE6D9357C96D9 /* [CP] Check Pods Manifest.lock */,
 				6CED394B1E87567F00015D5F /* Sources */,
 				6CED394C1E87567F00015D5F /* Frameworks */,
 				6CED394D1E87567F00015D5F /* Headers */,
 				6CED394E1E87567F00015D5F /* Resources */,
+				D42A6AF1DB956E8ECCB5D41D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,6 +131,7 @@
 					6CED394F1E87567F00015D5F = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 54B56XXLVZ;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -122,16 +158,52 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CED39601E87699D00015D5F /* CLMobileLoginVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D42A6AF1DB956E8ECCB5D41D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MobileLogin/Pods-MobileLogin-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE13FD171F7AE6D9357C96D9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6CED394B1E87567F00015D5F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CED39621E87E4AC00015D5F /* CLMobileLogin.swift in Sources */,
+				6CED395F1E87699D00015D5F /* CLMobileLoginVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,7 +311,9 @@
 		};
 		6CED39591E87567F00015D5F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9A348A1B652916B51B1E211 /* Pods-MobileLogin.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 54B56XXLVZ;
@@ -252,13 +326,16 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mixbus.MobileLogin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		6CED395A1E87567F00015D5F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43B2C1CBB099AEE7B361A826 /* Pods-MobileLogin.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 54B56XXLVZ;
