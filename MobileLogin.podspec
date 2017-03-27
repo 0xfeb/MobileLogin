@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "MobileLogin"
-  s.version      = "0.1.4"
+  s.version      = "0.1.5"
   s.summary      = "Simple login library"
 
   # This description is used to generate tags and improve search results.
@@ -91,6 +91,10 @@ Pod::Spec.new do |s|
 
   s.source_files  = "MobileLogin", "MobileLogin/*.h", "MobileLogin/**/*.{h,m,swift}"
   s.exclude_files = "MobileLogin/Exclude"
+
+  s.resource_bundles = {
+    'MyFramework' => ['MobileLogin/**/*.{storyboard,xib}']
+  }
 
   # s.public_header_files = "Classes/**/*.h"
 
